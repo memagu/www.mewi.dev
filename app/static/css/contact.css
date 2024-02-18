@@ -1,0 +1,86 @@
+@import "./base.css";
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+    font-size: 2vw;
+    padding: 0.5em;
+}
+
+.gradient-text {
+    background: linear-gradient(30deg, var(--color-mewi-blue), var(--color-mewi-cyan));
+    background-clip: text;
+    color: transparent;
+}
+
+.title {
+    font-size: 2em;
+    margin: 0.1em;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0.5em 0;
+}
+
+.label {
+    color: var(--color-secondary);
+    vertical-align: bottom;
+}
+
+.textbox {
+    width: 30vw;
+    max-width: 30vw;
+    min-height: 2em;
+    color: var(--color-primary);
+    background: var(--color-navbar);
+    caret-color: var(--color-secondary);
+    border-radius: 1em;
+    font-size: 0.5em;
+    padding: 0.25em 0.5em;
+    overflow: none;
+}
+
+.textbox:focus {
+    outline: none;
+    background: #192929;
+}
+
+.form-errors {
+    list-style-type: circle;
+    color: #ff1020;
+    font-size: 0.5em;
+    padding: 0 1.5em;
+}
+
+.message {
+    font-size: 0.5em;
+    height: 15em;
+    overflow-wrap: break-word;
+    resize: vertical;
+}
+
+#submit {
+    align-text: center;
+    font-size: 1em;
+    width: 30vw;
+    color: var(--color-primary);
+    background-color: var(--color-mewi-blue);
+    border: none;
+    border-radius: 1em;
+    padding: 0.25em 1em;
+    margin: 0.1em;
+    transition: color 0.1s ease-in, background-color 0.1s ease-in;
+    cursor: pointer;
+}
+
+#submit:hover {
+    color: var(--color-background);
+    background-color: var(--color-mewi-cyan);
+}

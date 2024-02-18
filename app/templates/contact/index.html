@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock %}
+{% block stylesheet %}{{ url_for("static", filename="css/contact.css") }}{% endblock %}
+
+{% block content %}
+    <div class="content">
+        {% if message_is_sent %}
+            <div class="title">Thank&nbsp<span class="gradient-text">you</span>&nbspfor reaching out!</div>
+        {% else %}
+            <div class="title">Contact&nbsp<span class="gradient-text">me</span>!</div>
+            <form method="POST" action="{{ url_for('contact.index') }}">
+                {{ contact_form.hidden_tag() }}
+                <div>
+                    {{ contact_form.name.label(class_="label") }}
+                    {{ contact_form.name(class_="textbox", placeholder="John Doe") }}
+                    <ul class="form-errors">
+                        {% for error_message in contact_form.name.errors %}
+                            <li class="form-error">{{ error_message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div>
+                    {{ contact_form.email.label(class_="label") }}
+                    {{ contact_form.email(class_="textbox", placeholder="john.doe@example.com") }}
+                    <ul class="form-errors">
+                        {% for error_message in contact_form.email.errors %}
+                            <li class="form-error">{{ error_message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div>
+                    {{ contact_form.message.label(class_="label") }}
+                    {{ contact_form.message(class_="textbox message", placeholder=lorem_text) }}
+                    <ul class="form-errors">
+                        {% for error_message in contact_form.message.errors %}
+                            <li class="form-error">{{ error_message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div>
+                    {{ contact_form.submit(id_="submit") }}
+                </div>
+            </form>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+:root {
+    --color-background: #292929;
+    --color-primary: #ffffff;
+    --color-secondary: #b4b4b4;
+    --color-tertiary: #696969;
+    --color-navbar: #191919;
+    --color-mewi-blue: #2e94df;
+    --color-mewi-cyan: #2dd5b9;
+
+    --navbar-height: 96px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.inline-icon {
+    vertical-align: top;
+    height: 1em;
+    margin: 0 0.25em;
+}
+
+body {
+    font-family: "Varela Round", sans-serif;
+    background: var(--color-background);
+    color: var(--color-primary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: color 0.1s ease-in;
+}
+
+a:hover {
+    color: var(--color-mewi-blue);
+}
+
+header {
+    display: flex;
+    height: var(--navbar-height);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+    background: linear-gradient(to bottom, var(--color-navbar) 95%, var(--color-background) 100%);
+}
+
+#icon {
+    max-height: var(--navbar-height);
+}
+
+#nav-items {
+    list-style: none;
+}
+
+#nav-items > li {
+    display: inline-block;
+    padding: 0 2em;
+}
+
+#contact-cta {
+    align-text: center;
+    font-size: 1.2em;
+    color: var(--color-primary);
+    background-color: var(--color-mewi-blue);
+    border: none;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    transition: color 0.1s ease-in, background-color 0.1s ease-in;
+}
+
+#contact-cta:hover {
+    color: var(--color-background);
+    background-color: var(--color-mewi-cyan);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+footer p, footer  a {
+    padding: 0.25em 0;
+}
+
+#contact-information {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#footer-nav {
+    display: flex;
+    flex-direction: column;
+    justify-contents: vertical;
+    align-items: flex-end;
+}
+
+#footer-nav > a {
+    color: var(--color-tertiary);
+}
+
+#footer-nav > a:hover {
+    color: var(--color-secondary);
+}

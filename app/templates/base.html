@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{% block title %}{% endblock %} - mewi.dev</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% endblock %}"/>
+</head>
+<body>
+    <header>
+        <a href="/"><img id="icon" src="{{ url_for('static', filename='logo.svg') }}"></a>
+        <nav>
+            <ul id="nav-items">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                {% block navbar %}{% endblock %}
+            </ul>
+        </nav>
+        <a id="contact-cta" href="/contact/">Contact</a>
+    </header>
+    {% block content %}{% endblock %}
+    <hr/>
+    <footer>
+        <div id="contact-information">
+            <p>Melker Widén</p>
+            <a id="phone" href="tel:+46722653223">Phone: +46 72-265 32 23</a>
+            <a id="email" href="mailto:melker.widen@gmail.com">Email: melker.widen@gmail.com</a>
+            <a id="github" href="https://github.com/memagu" target="_blank">GitHub<img class="inline-icon" src="{{ url_for('static', filename='images/github.svg') }}"></a>
+            <a id="linkedin" href="https://www.linkedin.com/in/memagu/" target="_blank">LinkedIn<img class="inline-icon" src="{{ url_for('static', filename='images/linkedin.png') }}"></a>
+        </div>
+        <div id="footer-right">
+            <div id="footer-nav">
+                <a href="/">Home</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+            </div>
+            <div id="copyright-notice">
+                <p>&copy 2024 Melker Widén</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

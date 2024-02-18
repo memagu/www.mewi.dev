@@ -1,0 +1,45 @@
+@import "./base.css";
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 65vh;
+}
+
+.gradient-text {
+    background: linear-gradient(30deg, var(--color-mewi-blue), var(--color-mewi-cyan));
+    background-clip: text;
+    color: transparent;
+}
+
+.title {
+    cursor: default;
+    font-size: 5vw;
+}
+
+
+.expandable-text {
+    display: inline-flex;
+}
+
+.expandable-text > .expandable-text-hidden {
+    visibility: hidden;
+    color: var(--color-background);
+    letter-spacing: -0.5em;
+    transition: visibility 0s 0.1s, color 0.2s linear, letter-spacing 0.25s ease-in-out;
+}
+
+.expandable-text:hover > .expandable-text-hidden {
+    visibility: visible;
+    color: inherit;
+    letter-spacing: 0em;
+}
+
+.links > a {
+    display: inline-block;
+    font-size: 2em;
+    padding: 0.5em;
+}
