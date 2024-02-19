@@ -1,8 +1,6 @@
 from flask import Blueprint, render_template
 import lorem
 
-from flask_mail import MIMEText, Message
-
 from app.extensions.mail import mail
 from app.forms.contact import Contact
 
@@ -16,7 +14,7 @@ def index():
     if contact_form.validate_on_submit():
         mail.send_message(
             f"Contact - {contact_form.name.data}",
-            ["melker.widen@gmail.com"],
+            ["contact@mewi.dev"],
             f"Hello, {contact_form.name.data} ({contact_form.email.data}) would like to get in touch!\n\n{contact_form.message.data}"
         )
         return render_template(
