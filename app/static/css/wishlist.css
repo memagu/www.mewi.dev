@@ -14,6 +14,12 @@
     margin-bottom: 1em;
 }
 
+.gradient-text {
+    background: linear-gradient(30deg, var(--color-mewi-blue), var(--color-mewi-cyan));
+    background-clip: text;
+    color: transparent;
+}
+
 .list {
     text-align: left;
     font-size: 2vw;
