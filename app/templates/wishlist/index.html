@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock %}
+{% block stylesheet %}{{ url_for("static", filename="css/wishlist.css") }}{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <div class="title">
+            My Wishlist 🪄
+        </div>
+        <div class="list">
+            <ul>
+                <li>2x Amazon Basics micro SD 64 GB</li>
+                <li>SanDisk Ultra (eller Extreme) 256 GB</li>
+                <li>Riskokare (Inga specialfunktioner, bara På/Håll värme). Gärna mer än en liter kapacitet.</li>
+                <li>Marshall Major V</li>
+                <li>Lurvig/mysig matta (1.5 m <= diameter <= 2 m)</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
