@@ -1,2 +1,2 @@
-# mewi.dev-template
-A template for *.mewi.dev repositories
+# www.mewi.dev
+A personal website and portfolio
